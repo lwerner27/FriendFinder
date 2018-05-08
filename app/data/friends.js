@@ -14,6 +14,38 @@ const friendsArr = [
             2,
             1
         ]
+    },
+    {
+        name: "Lucas",
+        photo: "",
+        scores: [
+            5,
+            4,
+            5,
+            1,
+            3,
+            1,
+            3,
+            2,
+            2,
+            5
+        ]
+    },
+    {
+        name: "Dylan",
+        photo: "",
+        scores: [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ]
     }
 ]
 
