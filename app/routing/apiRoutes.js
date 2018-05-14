@@ -1,3 +1,31 @@
+module.exports = function(app, friendsArr) {
+
+    app.get("/api/friends", (req, res) => {
+        res.send(friendsArr)
+    })
+
+    app.post("/api/friends", (req, res) => {
+
+        let userObj = req.body
+        let closestFriend;
+        let smallestDifference = 40;
+
+        for (let i = 0; i < friendsArr.length; i++) {
+            let currentDifference = calcTotalDif(userObj, friendsArr[i])
+            
+            if (currentDifference < smallestDifference) {
+                smallestDifference = currentDifference
+                closestFriend = friendsArr[i]
+            }
+        }
+
+        res.send(closestFriend)
+
+    })
+
+}
+
+
 function calcTotalDif(userObj, friendObj) {
 
     let difArr = []
